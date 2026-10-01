@@ -1,0 +1,57 @@
+# Tarea 1: Definición de Variables
+nombre_producto = "Teclado Mecánico"
+precio = 120.50
+cantidad_en_stock = 15
+tiene_descuento = True
+
+# Imprime una frase usando f-strings
+print(f"Producto: {nombre_producto} | Precio: ${precio} | Stock: {cantidad_en_stock} | Descuento: {tiene_descuento}")
+
+
+# Tarea 2: Lógica de Negocio (Bucle + Condicional)
+# Lista obligatoria: precios
+precios = [45, 120, 99.99, 250, 15]
+
+# Itera sobre la lista y evalúa cada precio
+for p in precios:
+    if p > 100:
+        print(f"El precio {p} es Caro")
+    else:
+        print(f"El precio {p} es Económico")
+
+
+# Tarea 3: Estructura de Datos Compleja
+# Diccionario obligatorio: almacen
+almacen = {
+    "Monitor": 10,
+    "Mouse": 50,
+    "Auriculares": 25
+}
+
+# Agrega un nuevo producto al diccionario
+almacen["Silla Gamer"] = 5
+
+# Consulta el stock de un producto específico y lo imprime
+producto_a_consultar = "Mouse"
+print(f"El stock actual de {producto_a_consultar} es: {almacen[producto_a_consultar]}")
+
+
+# Tarea 4: Modularización con Funciones
+# Función obligatoria: resumen_estadistico (recibe un solo parámetro)
+def resumen_estadistico(numeros):
+    # Calcula la suma, cantidad y promedio
+    suma = sum(numeros)
+    cantidad = len(numeros)
+    promedio = suma / cantidad if cantidad > 0 else 0
+    
+    # Devuelve el diccionario solicitado
+    return {
+        "suma_total": suma,
+        "promedio": promedio,
+        "cantidad_elementos": cantidad
+    }
+
+# Llama a la función con una lista de ejemplo e imprime el resultado
+lista_ejemplo = [10, 20, 30, 40, 50]
+resultado = resumen_estadistico(lista_ejemplo)
+print(f"El resumen estadístico es: {resultado}")
